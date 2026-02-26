@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-  <title>Free Status Page | Public & Private | Unlimited Subscribers | OneUptime</title>
+  <title>Free Status Page | Public & Private | Unlimited Subscribers | Encarta</title>
   <meta name="description"
     content="Create beautiful public or private status pages for free. Unlimited subscribers, custom domains, automatic updates from monitoring. Open source alternative to Atlassian Statuspage.">
   <%- include('head', {
@@ -67,7 +67,7 @@
             <div class="mt-16 sm:mt-20">
               <div class="relative mx-auto max-w-5xl">
                 <div class="relative rounded-xl bg-gray-900/5 p-1.5 ring-1 ring-gray-900/10">
-                  <img src="/img/status-pages.png" alt="OneUptime status page" width="2432" height="1442"
+                  <img src="/img/status-pages.png" alt="Encarta status page" width="2432" height="1442"
                     class="rounded-lg shadow-lg">
                   <%- include('./Partials/watch-demo.ejs', {videoId: "F6BNipy5VCk" }) -%>
                 </div>
@@ -151,7 +151,7 @@
       </div>
     </div>
 
-      <!-- Why OneUptime Section -->
+      <!-- Why Encarta Section -->
       <div class="relative overflow-hidden bg-white py-24 sm:py-32">
 
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -161,7 +161,7 @@
               <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              Why OneUptime
+              Why Encarta
             </div>
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
               The status page platform built for modern teams
@@ -594,7 +594,7 @@
 
                     <!-- Footer -->
                     <div class="px-4 py-3 border-t border-gray-100 text-center">
-                      <span class="text-gray-400 text-xs">Powered by OneUptime</span>
+                      <span class="text-gray-400 text-xs">Powered by Encarta</span>
                     </div>
                   </div>
                 </div>
@@ -1061,10 +1061,10 @@
                 <!-- Original status update message -->
                 <div class="group relative">
                   <div class="flex items-start gap-3">
-                    <img src="/img/OneUptimePNG/1.png" alt="OneUptime" class="w-10 h-10 rounded-lg flex-shrink-0 shadow-lg" />
+                    <img src="/img/wheatlogo.png" alt="Encarta" class="w-10 h-10 rounded-lg flex-shrink-0 shadow-lg" />
                     <div class="flex-1 min-w-0">
                       <div class="flex items-center gap-2">
-                        <span class="font-bold text-white text-sm hover:underline cursor-pointer">OneUptime</span>
+                        <span class="font-bold text-white text-sm hover:underline cursor-pointer">Encarta</span>
                         <span class="bg-[#4a3f7a] text-purple-200 text-[10px] px-1.5 py-0.5 rounded font-medium">APP</span>
                         <span class="text-gray-500 text-xs">2:30 PM</span>
                       </div>
@@ -1186,7 +1186,7 @@
               countEl.textContent = statusReplyCount + (statusReplyCount === 1 ? ' reply' : ' replies');
               avatarsEl.innerHTML = statusAvatars.slice(-3).map(a =>
                 a.isBot
-                  ? `<img src="/img/OneUptimePNG/1.png" alt="O" class="w-5 h-5 rounded-full ring-2 ring-[#1a1d21]" />`
+                  ? `<img src="/img/wheatlogo.png" alt="O" class="w-5 h-5 rounded-full ring-2 ring-[#1a1d21]" />`
                   : `<div class="w-5 h-5 rounded-full ${a.bg} flex items-center justify-center ring-2 ring-[#1a1d21]">
                       <span class="text-white text-[8px] font-bold">${a.initial}</span>
                     </div>`
@@ -1221,7 +1221,7 @@
             updateStatusThreadIndicator();
 
             const avatarHtml = isBot
-              ? `<img src="/img/OneUptimePNG/1.png" alt="OneUptime" class="w-8 h-8 rounded-lg flex-shrink-0 shadow-md" />`
+              ? `<img src="/img/wheatlogo.png" alt="Encarta" class="w-8 h-8 rounded-lg flex-shrink-0 shadow-md" />`
               : `<div class="w-8 h-8 rounded-lg bg-gradient-to-br ${avatarClass} flex items-center justify-center flex-shrink-0 shadow-md"><span class="text-white text-xs font-bold">${initial}</span></div>`;
 
             reply.innerHTML = `
@@ -1256,7 +1256,7 @@
               addStatusThreadReply('from-teal-400 to-teal-600', 'Lisa Wong', '2:32 PM', 'Identified: Database query latency spike. Scaling read replicas now.', false);
 
               setTimeout(() => {
-                addStatusThreadReply('from-green-400 to-green-600', 'OneUptime', '2:32 PM', '📢 Status page updated to <strong class="text-amber-400">Identified</strong><br/><span class="text-gray-400">247 subscribers notified</span>', true);
+                addStatusThreadReply('from-green-400 to-green-600', 'Encarta', '2:32 PM', '📢 Status page updated to <strong class="text-amber-400">Identified</strong><br/><span class="text-gray-400">247 subscribers notified</span>', true);
               }, 1000);
             }, 800);
           };
@@ -1276,7 +1276,7 @@
               btn.classList.add('bg-[#2e3136]', 'border', 'border-blue-500/50', 'text-blue-400');
 
               addStatusReaction('📧');
-              addStatusThreadReply('from-green-400 to-green-600', 'OneUptime', '2:34 PM', '📨 Notifications sent<br/><span class="text-gray-400">→ Email: 189 subscribers<br/>→ Slack: 12 channels<br/>→ Webhook: 8 endpoints</span>', true);
+              addStatusThreadReply('from-green-400 to-green-600', 'Encarta', '2:34 PM', '📨 Notifications sent<br/><span class="text-gray-400">→ Email: 189 subscribers<br/>→ Slack: 12 channels<br/>→ Webhook: 8 endpoints</span>', true);
             }, 800);
           };
 
@@ -1298,7 +1298,7 @@
               addStatusThreadReply('from-teal-400 to-teal-600', 'Lisa Wong', '2:42 PM', 'All systems back to normal. Read replicas scaled and query optimizations deployed.', false);
 
               setTimeout(() => {
-                addStatusThreadReply('from-green-400 to-green-600', 'OneUptime', '2:42 PM', '✅ Incident resolved<br/><span class="text-gray-400">Total duration: 12 minutes • All services operational</span>', true);
+                addStatusThreadReply('from-green-400 to-green-600', 'Encarta', '2:42 PM', '✅ Incident resolved<br/><span class="text-gray-400">Total duration: 12 minutes • All services operational</span>', true);
               }, 1000);
             }, 800);
           };

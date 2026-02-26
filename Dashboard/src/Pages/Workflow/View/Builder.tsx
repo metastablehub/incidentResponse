@@ -255,7 +255,7 @@ const Delete: FunctionComponent<PageComponentProps> = (): ReactElement => {
       <>
         <Card
           title={"Workflow Builder"}
-          description={"Workflow builder for OneUptime"}
+          description={"Workflow builder for Encarta"}
           rightElement={
             <div className="flex">
               <p className="text-sm text-gray-400 mr-3 mt-2">{saveStatus}</p>

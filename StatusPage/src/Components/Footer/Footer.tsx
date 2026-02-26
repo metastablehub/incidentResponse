@@ -17,8 +17,8 @@ const StatusPageFooter: FunctionComponent<ComponentProps> = (
 
   if (!props.hidePoweredByOneUptimeBranding) {
     links.push({
-      title: "Powered by OneUptime",
-      to: URL.fromString("https://oneuptime.com"),
+      title: "Powered by Encarta",
+      to: URL.fromString("https://Encarta.com"),
       openInNewTab: true,
     });
   }

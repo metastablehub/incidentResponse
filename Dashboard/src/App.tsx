@@ -60,38 +60,6 @@ const InitRoutes: React.LazyExoticComponent<
   return import("./Routes/InitRoutes");
 });
 
-const LogsRoutes: React.LazyExoticComponent<AllRoutesModule["LogsRoutes"]> =
-  lazy(() => {
-    return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
-      return { default: m.LogsRoutes };
-    });
-  });
-const MetricsRoutes: React.LazyExoticComponent<
-  AllRoutesModule["MetricsRoutes"]
-> = lazy(() => {
-  return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
-    return {
-      default: m.MetricsRoutes,
-    };
-  });
-});
-const TracesRoutes: React.LazyExoticComponent<AllRoutesModule["TracesRoutes"]> =
-  lazy(() => {
-    return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
-      return {
-        default: m.TracesRoutes,
-      };
-    });
-  });
-const ExceptionsRoutes: React.LazyExoticComponent<
-  AllRoutesModule["ExceptionsRoutes"]
-> = lazy(() => {
-  return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
-    return {
-      default: m.ExceptionsRoutes,
-    };
-  });
-});
 const IncidentsRoutes: React.LazyExoticComponent<
   AllRoutesModule["IncidentsRoutes"]
 > = lazy(() => {
@@ -169,15 +137,6 @@ const DashboardRoutes: React.LazyExoticComponent<
   return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
     return {
       default: m.DashboardRoutes,
-    };
-  });
-});
-const ServiceRoutes: React.LazyExoticComponent<
-  AllRoutesModule["ServiceRoutes"]
-> = lazy(() => {
-  return import("./Routes/AllRoutes").then((m: AllRoutesModule) => {
-    return {
-      default: m.ServiceRoutes,
     };
   });
 });
@@ -480,24 +439,6 @@ const App: () => JSX.Element = () => {
               />
             }
           />
-          {/* Logs */}
-          <PageRoute
-            path={RouteMap[PageMap.LOGS_ROOT]?.toString() || ""}
-            element={<LogsRoutes {...commonPageProps} />}
-          />
-
-          {/* Metrics */}
-          <PageRoute
-            path={RouteMap[PageMap.METRICS_ROOT]?.toString() || ""}
-            element={<MetricsRoutes {...commonPageProps} />}
-          />
-
-          {/* Traces */}
-          <PageRoute
-            path={RouteMap[PageMap.TRACES_ROOT]?.toString() || ""}
-            element={<TracesRoutes {...commonPageProps} />}
-          />
-
           {/* Monitors */}
           <PageRoute
             path={RouteMap[PageMap.MONITORS_ROOT]?.toString() || ""}
@@ -520,12 +461,6 @@ const App: () => JSX.Element = () => {
           <PageRoute
             path={RouteMap[PageMap.DASHBOARDS_ROOT]?.toString() || ""}
             element={<DashboardRoutes {...commonPageProps} />}
-          />
-
-          {/* Service */}
-          <PageRoute
-            path={RouteMap[PageMap.SERVICE_ROOT]?.toString() || ""}
-            element={<ServiceRoutes {...commonPageProps} />}
           />
 
           {/* Code Repository */}
@@ -728,13 +663,6 @@ const App: () => JSX.Element = () => {
           <PageRoute
             path={RouteMap[PageMap.AI_AGENT_TASKS_ROOT]?.toString() || ""}
             element={<AIAgentTasksRoutes {...commonPageProps} />}
-          />
-
-          {/** Exceptions */}
-
-          <PageRoute
-            path={RouteMap[PageMap.EXCEPTIONS_ROOT]?.toString() || ""}
-            element={<ExceptionsRoutes {...commonPageProps} />}
           />
 
           {/* 👇️ only match this when no other routes match */}

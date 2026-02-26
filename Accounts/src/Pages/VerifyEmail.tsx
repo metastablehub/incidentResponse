@@ -6,7 +6,7 @@ import ObjectID from "Common/Types/ObjectID";
 import { FormType } from "Common/UI/Components/Forms/ModelForm";
 import Link from "Common/UI/Components/Link/Link";
 import PageLoader from "Common/UI/Components/Loader/PageLoader";
-import OneUptimeLogo from "Common/UI/Images/logos/OneUptimeSVG/3-transparent.svg";
+import OneUptimeLogo from "Common/UI/Images/logos/wheatlogo.png";
 import API from "Common/UI/Utils/API/API";
 import ModelAPI from "Common/UI/Utils/ModelAPI/ModelAPI";
 import Navigation from "Common/UI/Utils/Navigation";
@@ -64,7 +64,7 @@ const VerifyEmail: () => JSX.Element = () => {
           <img
             className="mx-auto h-10 w-auto sm:h-12"
             src={OneUptimeLogo}
-            alt="OneUptime"
+            alt="Encarta"
           />
         </div>
 
@@ -77,7 +77,7 @@ const VerifyEmail: () => JSX.Element = () => {
               </h2>
               <p className="text-gray-600 mt-3 text-sm sm:text-base px-2 sm:px-0">
                 Thank you for verifying your email. You can now log in to
-                OneUptime.
+                Encarta.
               </p>
             </div>
           )}

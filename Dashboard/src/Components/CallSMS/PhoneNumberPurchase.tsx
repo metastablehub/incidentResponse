@@ -814,7 +814,7 @@ const PhoneNumberPurchase: FunctionComponent<PhoneNumberPurchaseProps> = (
         {showAssignConfirmModal && selectedOwnedNumber ? (
           <ConfirmModal
             title="Assign Phone Number"
-            description={`Are you sure you want to use ${selectedOwnedNumber.friendlyName} for this policy? ${selectedOwnedNumber.voiceUrl ? "This number currently has a webhook configured which will be updated to point to OneUptime." : "The webhook will be configured automatically."}`}
+            description={`Are you sure you want to use ${selectedOwnedNumber.friendlyName} for this policy? ${selectedOwnedNumber.voiceUrl ? "This number currently has a webhook configured which will be updated to point to Encarta." : "The webhook will be configured automatically."}`}
             error={error}
             submitButtonText="Assign Number"
             submitButtonType={ButtonStyleType.SUCCESS}

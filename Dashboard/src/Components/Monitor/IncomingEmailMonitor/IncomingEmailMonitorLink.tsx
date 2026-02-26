@@ -23,7 +23,7 @@ const IncomingEmailMonitorLink: FunctionComponent<ComponentProps> = (
             <ErrorMessage
               message={
                 <span>
-                  Inbound email is not configured. Please ask your OneUptime
+                  Inbound email is not configured. Please ask your Encarta
                   administrator to set up the inbound email environment
                   variables.{" "}
                   <Link

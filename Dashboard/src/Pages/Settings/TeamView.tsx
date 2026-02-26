@@ -382,7 +382,7 @@ const TeamView: FunctionComponent<PageComponentProps> = (
         onBeforeCreate={(item: TeamMember): Promise<TeamMember> => {
           if (isPushGroupsManaged) {
             throw new BadDataException(
-              "Cannot invite users while SCIM Push Groups is enabled for this project. Disable Push Groups to manage members from OneUptime.",
+              "Cannot invite users while SCIM Push Groups is enabled for this project. Disable Push Groups to manage members from Encarta.",
             );
           }
           if (!props.currentProject || !props.currentProject._id) {
@@ -395,7 +395,7 @@ const TeamView: FunctionComponent<PageComponentProps> = (
         onBeforeDelete={async (item: TeamMember): Promise<TeamMember> => {
           if (isPushGroupsManaged) {
             throw new BadDataException(
-              "Cannot remove team members while SCIM Push Groups is enabled for this project. Disable Push Groups to manage members from OneUptime.",
+              "Cannot remove team members while SCIM Push Groups is enabled for this project. Disable Push Groups to manage members from Encarta.",
             );
           }
           return item;

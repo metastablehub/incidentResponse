@@ -754,7 +754,7 @@ export default class CriteriaFilterUtil {
     }
 
     if (checkOn === CheckOn.EmailTo) {
-      return "monitor@inbound.oneuptime.com";
+      return "monitor@inbound.Encarta.com";
     }
 
     if (

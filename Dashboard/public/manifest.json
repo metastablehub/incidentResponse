@@ -1,36 +1,36 @@
 {
-  "short_name": "OneUptime",
-  "name": "OneUptime - Complete Observability Platform",
-  "id": "/dashboard/oneuptime",
+  "short_name": "Encarta",
+  "name": "Encarta - Complete Observability Platform",
+  "id": "/dashboard/Encarta",
   "description": "Monitor, observe, debug, and resolve. Everything you need to build reliable software in one open-source platform.",
   "iarc_rating_id": "60bf3666-0cc5-4ac4-a5c7-726a4d52b7b6",
   "widgets": [],
   "icons": [
     {
-      "src": "/dashboard/assets/img/favicons/favicon.ico",
+      "src": "/dashboard/wheatlogo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/dashboard/assets/img/favicons/android-chrome-192x192.png",
+      "src": "/dashboard/wheatlogo.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "/dashboard/assets/img/favicons/android-chrome-512x512.png",
+      "src": "/dashboard/wheatlogo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "/dashboard/assets/img/favicons/android-chrome-192x192.png",
+      "src": "/dashboard/wheatlogo.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "/dashboard/assets/img/favicons/android-chrome-512x512.png",
+      "src": "/dashboard/wheatlogo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
@@ -104,7 +104,7 @@
   "start_url": "/dashboard/",
   "scope": "/dashboard/",
   "scope_extensions": [
-    {"origin": "*.oneuptime.com"}
+    {"origin": "*.Encarta.com"}
   ],
   "launch_handler": {
     "client_mode": ["focus-existing"]
@@ -125,19 +125,19 @@
   },
   "protocol_handlers": [
     {
-      "protocol": "web+oneuptime",
+      "protocol": "web+Encarta",
       "url": "/dashboard?url=%s"
     }
   ],
   "shortcuts": [
     {
-      "name": "OneUptime Dashboard",
-      "short_name": "OneUptime Dashboard",
-      "description": "Open OneUptime Dashboard",
+      "name": "Encarta Dashboard",
+      "short_name": "Encarta Dashboard",
+      "description": "Open Encarta Dashboard",
       "url": "/dashboard",
       "icons": [
         {
-          "src": "/dashboard/assets/img/favicons/android-chrome-192x192.png",
+          "src": "/dashboard/wheatlogo.png",
           "sizes": "192x192"
         }
       ]

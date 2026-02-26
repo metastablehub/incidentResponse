@@ -1,7 +1,6 @@
 // Tailwind
 import Route from "Common/Types/API/Route";
 import Image from "Common/UI/Components/Image/Image";
-import OneUptimeLogo from "Common/UI/Images/logos/OneUptimeSVG/3-transparent.svg";
 import React, { FunctionComponent, ReactElement } from "react";
 
 export interface ComponentProps {
@@ -21,8 +20,8 @@ const Logo: FunctionComponent<ComponentProps> = (
               props.onClick();
             }
           }}
-          imageUrl={Route.fromString(`${OneUptimeLogo}`)}
-          alt={"OneUptime"}
+          imageUrl={Route.fromString("/dashboard/wheatlogo.png")}
+          alt={"Encarta"}
         />
       </div>
     </div>

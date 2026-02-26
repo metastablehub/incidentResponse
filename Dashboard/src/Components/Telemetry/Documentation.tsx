@@ -33,12 +33,12 @@ const TelemetryDocumentation: FunctionComponent = (): ReactElement => {
     <Card
       title={"Documentation"}
       description={
-        "Learn how to integrate OneUptime with your application or resources to collect logs, metrics and traces data."
+        "Learn how to integrate Encarta with your application or resources to collect logs, metrics and traces data."
       }
     >
       <ImageTiles
         title="Integrate with OpenTelemetry"
-        description="OneUptime supports a native integration with OpenTelemetry. OpenTelemetry is a collection of tools, APIs, and SDKs used to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software performance and behavior."
+        description="Encarta supports a native integration with OpenTelemetry. OpenTelemetry is a collection of tools, APIs, and SDKs used to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software performance and behavior."
         tiles={[
           {
             image: JavaScriptImage,
@@ -90,7 +90,7 @@ const TelemetryDocumentation: FunctionComponent = (): ReactElement => {
 
       <ImageTiles
         title="Send Native Syslog"
-        description="Forward RFC3164 or RFC5424 Syslog payloads directly to OneUptime over HTTPS without additional collectors."
+        description="Forward RFC3164 or RFC5424 Syslog payloads directly to Encarta over HTTPS without additional collectors."
         tiles={[
           {
             image: SyslogImage,
@@ -102,7 +102,7 @@ const TelemetryDocumentation: FunctionComponent = (): ReactElement => {
 
       <ImageTiles
         title="Integrate with Fluentd"
-        description="OneUptime supports a native integration with Fluentd. Fluentd is an open-source data collector for unified logging layer. Fluentd allows you to unify data collection and consumption for a better use and understanding of data."
+        description="Encarta supports a native integration with Fluentd. Fluentd is an open-source data collector for unified logging layer. Fluentd allows you to unify data collection and consumption for a better use and understanding of data."
         tiles={[
           {
             image: DockerImage,
@@ -139,7 +139,7 @@ const TelemetryDocumentation: FunctionComponent = (): ReactElement => {
 
       <ImageTiles
         title="Integrate with FluentBit"
-        description="OneUptime supports a native integration with FluentBit. FluentBit is an open-source data collector for unified logging and telemetry layer. FluentBit allows you to unify data collection and consumption for a better use and understanding of data."
+        description="Encarta supports a native integration with FluentBit. FluentBit is an open-source data collector for unified logging and telemetry layer. FluentBit allows you to unify data collection and consumption for a better use and understanding of data."
         tiles={[
           {
             image: DockerImage,

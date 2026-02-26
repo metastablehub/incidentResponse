@@ -72,11 +72,11 @@ const DashboardFooter: () => JSX.Element = () => {
         links={[
           {
             title: "Help and Support",
-            to: URL.fromString("https://oneuptime.com/support"),
+            to: URL.fromString("https://Encarta.com/support"),
           },
           {
             title: "Legal",
-            to: URL.fromString("https://oneuptime.com/legal"),
+            to: URL.fromString("https://Encarta.com/legal"),
           },
           {
             title: "Version",
@@ -90,7 +90,7 @@ const DashboardFooter: () => JSX.Element = () => {
 
       {showAboutModal ? (
         <ConfirmModal
-          title={`OneUptime Version`}
+          title={`Encarta Version`}
           description={
             <div>
               {Object.keys(versionText).map((key: string, i: number) => {

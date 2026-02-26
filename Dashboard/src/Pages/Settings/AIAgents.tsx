@@ -33,7 +33,7 @@ const AIAgentsPage: FunctionComponent<
           cardProps={{
             title: "Global AI Agents",
             description:
-              "Global AI Agents help you automate incident management with AI-powered responses from OneUptime's infrastructure.",
+              "Global AI Agents help you automate incident management with AI-powered responses from Encarta's infrastructure.",
           }}
           fetchRequestOptions={{
             overrideRequestUrl: URL.fromString(APP_API_URL.toString()).addRoute(

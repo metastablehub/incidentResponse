@@ -85,7 +85,7 @@ const ServiceCodeRepositories: FunctionComponent<
             required: false,
             defaultValue: true,
             description:
-              "Enable OneUptime to automatically create pull requests to improve the code for this service.",
+              "Enable Encarta to automatically create pull requests to improve the code for this service.",
           },
           {
             field: {
@@ -97,7 +97,7 @@ const ServiceCodeRepositories: FunctionComponent<
             defaultValue: 3,
             placeholder: "3",
             description:
-              "Maximum number of open pull requests that OneUptime can create for this service at any given time.",
+              "Maximum number of open pull requests that Encarta can create for this service at any given time.",
           },
           {
             field: {

@@ -91,7 +91,7 @@ export const getStatusPageData: (
       id: statusPageId,
       title,
       description,
-      faviconUrl: `/status-page-api/favicon/${statusPageIdOrDomain}`,
+      faviconUrl: `/status-page/favicon.ico`,
     };
   } catch (err) {
     logger.error("Error getting status page data:");

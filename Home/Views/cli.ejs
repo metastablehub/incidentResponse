@@ -4,9 +4,9 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-    <title>OneUptime | CLI - Command Line Interface for Observability</title>
+    <title>Encarta | CLI - Command Line Interface for Observability</title>
     <meta name="description"
-        content="OneUptime CLI lets you manage monitors, incidents, status pages, and observability data from your terminal. Deploy, configure, and automate your monitoring infrastructure with simple commands.">
+        content="Encarta CLI lets you manage monitors, incidents, status pages, and observability data from your terminal. Deploy, configure, and automate your monitoring infrastructure with simple commands.">
         <%- include('head', {
     enableGoogleTagManager: typeof enableGoogleTagManager !== 'undefined' ? enableGoogleTagManager : false
 }) -%>
@@ -75,7 +75,7 @@
               <!-- Terminal content -->
               <div class="p-6 font-mono text-sm space-y-3">
                 <div>
-                  <span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime monitor list</span>
+                  <span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta monitor list</span>
                 </div>
                 <div class="text-gray-400 pl-2 space-y-1">
                   <div class="flex items-center gap-3">
@@ -104,7 +104,7 @@
                   </div>
                 </div>
                 <div class="mt-4">
-                  <span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime incident create --title "Payment Service Down" --severity critical</span>
+                  <span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta incident create --title "Payment Service Down" --severity critical</span>
                 </div>
                 <div class="text-emerald-400 pl-2">
                   Incident INC-2847 created successfully. On-call team notified.
@@ -259,14 +259,14 @@
                 </div>
 
                 <div class="p-4 font-mono text-xs space-y-2">
-                  <div><span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime monitor create \</span></div>
+                  <div><span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta monitor create \</span></div>
                   <div class="text-gray-300 pl-4">--name "API Health Check" \</div>
                   <div class="text-gray-300 pl-4">--type http \</div>
                   <div class="text-gray-300 pl-4">--url https://api.example.com/health \</div>
                   <div class="text-gray-300 pl-4">--interval 30s</div>
                   <div class="mt-2 text-emerald-400">Monitor created: mon_8x7k2m9p</div>
                   <div class="text-gray-500">Type: HTTP | Interval: 30s | Status: Active</div>
-                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime monitor status mon_8x7k2m9p</span></div>
+                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta monitor status mon_8x7k2m9p</span></div>
                   <div class="mt-1 text-emerald-400">&#9679; Up - 200 OK (45ms)</div>
                   <div class="text-gray-500">Last checked: 12s ago</div>
                 </div>
@@ -293,7 +293,7 @@
                 </div>
 
                 <div class="p-4 font-mono text-xs space-y-2">
-                  <div><span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime incident list --state active</span></div>
+                  <div><span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta incident list --state active</span></div>
                   <div class="mt-1 space-y-1.5">
                     <div class="flex items-center gap-2">
                       <span class="text-red-400">&#9679;</span>
@@ -308,9 +308,9 @@
                       <span class="text-gray-400">High latency on DB</span>
                     </div>
                   </div>
-                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime incident acknowledge INC-2847</span></div>
+                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta incident acknowledge INC-2847</span></div>
                   <div class="text-emerald-400 mt-1">Incident INC-2847 acknowledged.</div>
-                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">oneuptime incident resolve INC-2847 \</span></div>
+                  <div class="mt-3"><span class="text-emerald-400">$</span> <span class="text-gray-300">Encarta incident resolve INC-2847 \</span></div>
                   <div class="text-gray-300 pl-4">--note "Restarted payment service pod"</div>
                   <div class="text-emerald-400 mt-1">Incident INC-2847 resolved.</div>
                 </div>
@@ -485,7 +485,7 @@
               <span class="text-sm font-medium text-gray-300">npm</span>
             </div>
             <div class="font-mono text-sm text-emerald-400">
-              npm install -g oneuptime-cli
+              npm install -g Encarta-cli
             </div>
           </div>
 
@@ -494,7 +494,7 @@
               <span class="text-sm font-medium text-gray-300">Homebrew</span>
             </div>
             <div class="font-mono text-sm text-emerald-400">
-              brew install oneuptime/tap/oneuptime
+              brew install Encarta/tap/Encarta
             </div>
           </div>
 
@@ -503,7 +503,7 @@
               <span class="text-sm font-medium text-gray-300">Docker</span>
             </div>
             <div class="font-mono text-sm text-emerald-400">
-              docker run --rm oneuptime/cli monitor list
+              docker run --rm Encarta/cli monitor list
             </div>
           </div>
         </div>

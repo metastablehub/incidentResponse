@@ -52,7 +52,7 @@ const init: PromiseVoidFunction = async (): Promise<void> => {
           description:
             "Status Page lets you see real-time information about the status of our services.",
           faviconUrl:
-            "/status-page-api/favicon/" + ObjectID.getZeroObjectID().toString(),
+            "/status-page/wheatlogo.png,
         };
       },
     });

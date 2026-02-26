@@ -324,7 +324,7 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
       setError(
         <div>
           Looks like the Microsoft Teams App Client ID is not set in the
-          environment variables when you installed OneUptime. For more
+          environment variables when you installed Encarta. For more
           information, please check this guide to set up Microsoft Teams App
           properly:{" "}
           <Link
@@ -399,12 +399,12 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
   // if user is not connected and the project is connected with Teams.
   if (!isUserAccountConnected && isProjectAccountConnected) {
     cardTitle = `You are disconnected from Microsoft Teams`;
-    cardDescription = `Connect your account with Microsoft Teams to make the most out of OneUptime.`;
+    cardDescription = `Connect your account with Microsoft Teams to make the most out of Encarta.`;
     cardButtons = [
       // connect with Teams button.
       getConnectWithTeamsButton(`Connect my account with Microsoft Teams`),
       {
-        title: `Uninstall OneUptime from Microsoft Teams`,
+        title: `Uninstall Encarta from Microsoft Teams`,
         isLoading: isButtonLoading,
         buttonStyle: SharedButtonStyle.DANGER,
         onClick: async () => {
@@ -447,13 +447,13 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
     !isUserAccountConnected
   ) {
     cardTitle = `Admin Consent Granted - Connect Your Account`;
-    cardDescription = `Admin consent has been granted for the OneUptime Microsoft Teams app. Now connect your account to select a team and complete the setup.`;
+    cardDescription = `Admin consent has been granted for the Encarta Microsoft Teams app. Now connect your account to select a team and complete the setup.`;
     cardButtons = [getConnectWithTeamsButton(`Connect with Microsoft Teams`)];
   }
 
   if (!isProjectAccountConnected && !isAdminConsentCompleted) {
     cardTitle = `Connect with Microsoft Teams`;
-    cardDescription = `Connect your account with Microsoft Teams to make the most out of OneUptime.`;
+    cardDescription = `Connect your account with Microsoft Teams to make the most out of Encarta.`;
     cardButtons = [getConnectWithTeamsButton(`Connect with Microsoft Teams`)];
   }
 
@@ -472,8 +472,8 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
           }
           description={
             isAdminConsentCompleted
-              ? "Admin consent has been successfully granted for the OneUptime Microsoft Teams app. You can now proceed to connect your account."
-              : "Grant tenant-wide admin consent for the OneUptime Microsoft Teams app. This step is required to enable application permissions (e.g., posting to channels) without per-user consent. You must be a Microsoft 365 admin."
+              ? "Admin consent has been successfully granted for the Encarta Microsoft Teams app. You can now proceed to connect your account."
+              : "Grant tenant-wide admin consent for the Encarta Microsoft Teams app. This step is required to enable application permissions (e.g., posting to channels) without per-user consent. You must be a Microsoft 365 admin."
           }
           buttons={
             isAdminConsentCompleted
@@ -525,7 +525,7 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
           <div className="mt-6">
             <Card
               title="Action Required: Install App on Microsoft Teams"
-              description="If you prefer to install the OneUptime app manually in Microsoft Teams, download the app manifest zip file and follow the instructions below."
+              description="If you prefer to install the Encarta app manually in Microsoft Teams, download the app manifest zip file and follow the instructions below."
               buttons={[
                 {
                   title: "Download App Manifest Zip",
@@ -545,7 +545,7 @@ const MicrosoftTeamsIntegration: FunctionComponent<ComponentProps> = (
 ##### Installation Steps:
 
 Pre-requisite: 
-- If you or anyone else in your organization has already installed the OneUptime app in Microsoft Teams, you can skip the installation steps. In this case, you do not need to do anything here.
+- If you or anyone else in your organization has already installed the Encarta app in Microsoft Teams, you can skip the installation steps. In this case, you do not need to do anything here.
 
 
 1. **Download the zip file** using the button above
@@ -554,10 +554,10 @@ Pre-requisite:
    - Click "Upload an app" → "Upload a custom app"
    - Select the downloaded zip file
 3. **Install the app:**
-   - Find "OneUptime" in your apps
+   - Find "Encarta" in your apps
    - Click "Add" to install it for your team
    - Grant the necessary permissions
-4. Once the app is installed, you can create workspace notification rules in OneUptime to send messages to your teams.
+4. Once the app is installed, you can create workspace notification rules in Encarta to send messages to your teams.
 
 The zip file contains the app manifest and required icons for Teams installation.
               `}
@@ -569,8 +569,8 @@ The zip file contains the app manifest and required icons for Teams installation
       {isAdminConsentCompleted && isUserAccountConnected && BILLING_ENABLED && (
         <div className="mt-6">
           <Card
-            title="Install OneUptime App from Microsoft Teams Store"
-            description="Install the OneUptime app directly from the Microsoft Teams App Store to enable notifications and integrations."
+            title="Install Encarta App from Microsoft Teams Store"
+            description="Install the Encarta app directly from the Microsoft Teams App Store to enable notifications and integrations."
             buttons={[
               {
                 title: "Open Teams Store",
@@ -601,16 +601,16 @@ The zip file contains the app manifest and required icons for Teams installation
               text={`
 ##### Installation Steps:
 
-1. **Click the button above** to open the OneUptime app in the Microsoft Teams Store
+1. **Click the button above** to open the Encarta app in the Microsoft Teams Store
 2. **Install the app:**
    - Click "Add" to install it for yourself
    - Or click "Add to a team" to install it for your entire team
    - Grant the necessary permissions
-3. Once the app is installed, you can create workspace notification rules in OneUptime to send messages to your teams.
+3. Once the app is installed, you can create workspace notification rules in Encarta to send messages to your teams.
 
 ##### Alternative Installation:
 
-You can also search for "OneUptime" in the Microsoft Teams App Store and install it from there.
+You can also search for "Encarta" in the Microsoft Teams App Store and install it from there.
 
 ##### Manual Sideloading (Advanced):
 

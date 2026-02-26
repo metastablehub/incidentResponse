@@ -1,0 +1,222 @@
+# Custom OneUptime production stack for Splunk deployment.
+# Builds images from this local repository (includes branding/UI changes),
+# and excludes Observability ingest services (Telemetry + OTel Collector).
+
+x-common-depends-on: &common-depends-on
+  postgres:
+    condition: service_healthy
+  redis:
+    condition: service_healthy
+  clickhouse:
+    condition: service_healthy
+
+services:
+  redis:
+    extends:
+      file: ./docker-compose.base.yml
+      service: redis
+
+  clickhouse:
+    extends:
+      file: ./docker-compose.base.yml
+      service: clickhouse
+
+  postgres:
+    ports:
+      - "5400:5432"
+    extends:
+      file: ./docker-compose.base.yml
+      service: postgres
+
+  accounts:
+    image: ghcr.io/metastablehub/incidentresponse/accounts:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: accounts
+    build:
+      context: .
+      dockerfile: ./Accounts/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  dashboard:
+    image: ghcr.io/metastablehub/incidentresponse/dashboard:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: dashboard
+    build:
+      context: .
+      dockerfile: ./Dashboard/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  admin-dashboard:
+    image: ghcr.io/metastablehub/incidentresponse/admin-dashboard:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: admin-dashboard
+    build:
+      context: .
+      dockerfile: ./AdminDashboard/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  status-page:
+    image: ghcr.io/metastablehub/incidentresponse/status-page:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: status-page
+    build:
+      context: .
+      dockerfile: ./StatusPage/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  app:
+    image: ghcr.io/metastablehub/incidentresponse/app:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: app
+    build:
+      context: .
+      dockerfile: ./App/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  worker:
+    image: ghcr.io/metastablehub/incidentresponse/worker:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: worker
+    build:
+      context: .
+      dockerfile: ./Worker/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  docs:
+    image: ghcr.io/metastablehub/incidentresponse/docs:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: docs
+    build:
+      context: .
+      dockerfile: ./Docs/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  workflow:
+    image: ghcr.io/metastablehub/incidentresponse/workflow:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: workflow
+    build:
+      context: .
+      dockerfile: ./Workflow/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  home:
+    image: ghcr.io/metastablehub/incidentresponse/home:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: home
+    build:
+      context: .
+      dockerfile: ./Home/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  probe-1:
+    image: ghcr.io/metastablehub/incidentresponse/probe:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: probe-1
+    build:
+      context: .
+      dockerfile: ./Probe/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  probe-2:
+    image: ghcr.io/metastablehub/incidentresponse/probe:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: probe-2
+    build:
+      context: .
+      dockerfile: ./Probe/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  probe-ingest:
+    image: ghcr.io/metastablehub/incidentresponse/probe-ingest:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: probe-ingest
+    build:
+      context: .
+      dockerfile: ./ProbeIngest/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  server-monitor-ingest:
+    image: ghcr.io/metastablehub/incidentresponse/server-monitor-ingest:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: server-monitor-ingest
+    build:
+      context: .
+      dockerfile: ./ServerMonitorIngest/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  incoming-request-ingest:
+    image: ghcr.io/metastablehub/incidentresponse/incoming-request-ingest:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: incoming-request-ingest
+    build:
+      context: .
+      dockerfile: ./IncomingRequestIngest/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  isolated-vm:
+    image: ghcr.io/metastablehub/incidentresponse/isolated-vm:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: isolated-vm
+    build:
+      context: .
+      dockerfile: ./IsolatedVM/Dockerfile
+
+  mcp:
+    image: ghcr.io/metastablehub/incidentresponse/mcp:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: mcp
+    build:
+      context: .
+      dockerfile: ./MCP/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+  ingress:
+    image: ghcr.io/metastablehub/incidentresponse/ingress:${SPLUNK_IMAGE_TAG:-latest}
+    extends:
+      file: ./docker-compose.base.yml
+      service: ingress
+    build:
+      context: .
+      dockerfile: ./Nginx/Dockerfile
+    depends_on:
+      <<: *common-depends-on
+
+volumes:
+  postgres:
+  clickhouse:
+
+networks:
+  oneuptime:
+    driver: bridge

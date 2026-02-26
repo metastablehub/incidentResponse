@@ -26,22 +26,22 @@ const ServerMonitorDocumentation: FunctionComponent<ComponentProps> = (
 curl -s ${HTTP_PROTOCOL}${HOST.toString()}/docs/static/scripts/infrastructure-agent/install.sh | sudo bash 
 
 # Configure the agent (without proxy)
-sudo oneuptime-infrastructure-agent configure --secret-key=${props.secretKey.toString()} --oneuptime-url=${host}
+sudo Encarta-infrastructure-agent configure --secret-key=${props.secretKey.toString()} --Encarta-url=${host}
 
 # Configure the agent (with proxy - optional)
 # If you're using a proxy, you can set the proxy by running the following command
-sudo oneuptime-infrastructure-agent configure --proxy-url=http://proxy.example.com:8080  --secret-key=${props.secretKey.toString()} --oneuptime-url=${host}
+sudo Encarta-infrastructure-agent configure --proxy-url=http://proxy.example.com:8080  --secret-key=${props.secretKey.toString()} --Encarta-url=${host}
 
 # To Start
-sudo oneuptime-infrastructure-agent start
+sudo Encarta-infrastructure-agent start
 
 
 
 # To Stop
-sudo oneuptime-infrastructure-agent stop
+sudo Encarta-infrastructure-agent stop
 
 # To Uninstall
-sudo oneuptime-infrastructure-agent uninstall
+sudo Encarta-infrastructure-agent uninstall
 `}
             />
           </div>
@@ -55,25 +55,25 @@ sudo oneuptime-infrastructure-agent uninstall
             <CodeBlock
               language="bash"
               code={`
-# Step 1: Download the agent from GitHub https://github.com/OneUptime/oneuptime/releases/latest
-# You should see a file named oneuptime-infrastructure-agent_windows_amd64.zip (if you're using x64) or oneuptime-infrastructure-agent_windows_arm64.zip (if you're using arm64)
-# Extract the zip file, and you should see a file named oneuptime-infrastructure-agent.exe 
+# Step 1: Download the agent from GitHub https://github.com/Encarta/Encarta/releases/latest
+# You should see a file named Encarta-infrastructure-agent_windows_amd64.zip (if you're using x64) or Encarta-infrastructure-agent_windows_arm64.zip (if you're using arm64)
+# Extract the zip file, and you should see a file named Encarta-infrastructure-agent.exe 
 
 # Command Line: Configure the agent in cmd (Run as Administrator)
-oneuptime-infrastructure-agent configure --secret-key=${props.secretKey.toString()} --oneuptime-url=${host}
+Encarta-infrastructure-agent configure --secret-key=${props.secretKey.toString()} --Encarta-url=${host}
 
 # Using a proxy (optional)
 # If you're using a proxy, you can set the proxy by running the following command
-oneuptime-infrastructure-agent configure --proxy-url=http://proxy.example.com:8080  --secret-key=${props.secretKey.toString()} --oneuptime-url=${host}
+Encarta-infrastructure-agent configure --proxy-url=http://proxy.example.com:8080  --secret-key=${props.secretKey.toString()} --Encarta-url=${host}
 
 # To Start
-oneuptime-infrastructure-agent start
+Encarta-infrastructure-agent start
 
 # To Stop
-oneuptime-infrastructure-agent stop
+Encarta-infrastructure-agent stop
 
 # To Uninstall
-oneuptime-infrastructure-agent uninstall
+Encarta-infrastructure-agent uninstall
 `}
             />
           </div>

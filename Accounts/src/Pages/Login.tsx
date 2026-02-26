@@ -21,7 +21,7 @@ import {
   CAPTCHA_ENABLED,
   CAPTCHA_SITE_KEY,
 } from "Common/UI/Config";
-import OneUptimeLogo from "Common/UI/Images/logos/OneUptimeSVG/3-transparent.svg";
+import OneUptimeLogo from "Common/UI/Images/logos/wheatlogo.png";
 import EditionLabel from "Common/UI/Components/EditionLabel/EditionLabel";
 import UiAnalytics from "Common/UI/Utils/Analytics";
 import LoginUtil from "Common/UI/Utils/Login";
@@ -279,7 +279,7 @@ const LoginPage: () => JSX.Element = () => {
         <img
           className="mx-auto h-10 w-auto sm:h-12"
           src={OneUptimeLogo}
-          alt="OneUptime"
+          alt="Encarta"
         />
         <div className="mt-4 flex justify-center">
           <EditionLabel />
@@ -290,7 +290,7 @@ const LoginPage: () => JSX.Element = () => {
               Sign in to your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600 px-2 sm:px-0">
-              Join thousands of business that use OneUptime to help them stay
+              Join thousands of business that use Encarta to help them stay
               online all the time.
             </p>
           </>

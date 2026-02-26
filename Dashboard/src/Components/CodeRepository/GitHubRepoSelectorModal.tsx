@@ -357,7 +357,7 @@ const GitHubRepoSelectorModal: FunctionComponent<ComponentProps> = (
                   placeholder="Enter a display name for this repository"
                 />
                 <p className="mt-1.5 text-xs text-gray-500">
-                  This name will be shown in OneUptime
+                  This name will be shown in Encarta
                 </p>
               </div>
             )}

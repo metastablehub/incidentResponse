@@ -24,7 +24,7 @@ const CustomAIAgentDocumentation: FunctionComponent<ComponentProps> = (
               language="bash"
               code={`
 # Run with Docker
-docker run --name oneuptime-ai-agent --network host -e AI_AGENT_KEY=${props.aiAgentKey.toString()} -e AI_AGENT_ID=${props.aiAgentId.toString()} -e ONEUPTIME_URL=${host.toString()} -d oneuptime/ai-agent:release
+docker run --name Encarta-ai-agent --network host -e AI_AGENT_KEY=${props.aiAgentKey.toString()} -e AI_AGENT_ID=${props.aiAgentId.toString()} -e ONEUPTIME_URL=${host.toString()} -d Encarta/ai-agent:release
 `}
             />
           </div>

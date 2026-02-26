@@ -83,7 +83,7 @@ const DashboardFooter: () => JSX.Element = () => {
                 Help and Support
               </span>
             ),
-            to: URL.fromString("https://oneuptime.com/support"),
+            to: URL.fromString("https://Encarta.com/support"),
             openInNewTab: true,
           },
           {
@@ -93,7 +93,7 @@ const DashboardFooter: () => JSX.Element = () => {
                 Legal
               </span>
             ),
-            to: URL.fromString("https://oneuptime.com/legal"),
+            to: URL.fromString("https://Encarta.com/legal"),
             openInNewTab: true,
           },
           {
@@ -113,7 +113,7 @@ const DashboardFooter: () => JSX.Element = () => {
 
       {showAboutModal ? (
         <ConfirmModal
-          title={`OneUptime Version`}
+          title={`Encarta Version`}
           description={
             <div>
               {Object.keys(versionText).map((key: string, i: number) => {

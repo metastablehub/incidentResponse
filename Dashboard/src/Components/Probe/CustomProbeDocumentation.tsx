@@ -24,7 +24,7 @@ const CustomProbeDocumentation: FunctionComponent<ComponentProps> = (
               language="bash"
               code={`
 # Run with Docker
-docker run --name oneuptime-probe --network host -e PROBE_KEY=${props.probeKey.toString()} -e PROBE_ID=${props.probeId.toString()} -e ONEUPTIME_URL=${host.toString()} -d oneuptime/probe:release
+docker run --name Encarta-probe --network host -e PROBE_KEY=${props.probeKey.toString()} -e PROBE_ID=${props.probeId.toString()} -e ONEUPTIME_URL=${host.toString()} -d Encarta/probe:release
 `}
             />
             <div className="mt-4">
@@ -35,24 +35,24 @@ docker run --name oneuptime-probe --network host -e PROBE_KEY=${props.probeKey.t
                 language="bash"
                 code={`
 # With HTTP/HTTPS proxy
-docker run --name oneuptime-probe --network host \\
+docker run --name Encarta-probe --network host \\
   -e PROBE_KEY=${props.probeKey.toString()} \\
   -e PROBE_ID=${props.probeId.toString()} \\
   -e ONEUPTIME_URL=${host.toString()} \\
   -e HTTP_PROXY_URL=http://proxy.example.com:8080 \\
   -e HTTPS_PROXY_URL=http://proxy.example.com:8080 \\
   -e NO_PROXY=localhost,.internal.example.com \
-  -d oneuptime/probe:release
+  -d Encarta/probe:release
 
 # With proxy authentication
-docker run --name oneuptime-probe --network host \\
+docker run --name Encarta-probe --network host \\
   -e PROBE_KEY=${props.probeKey.toString()} \\
   -e PROBE_ID=${props.probeId.toString()} \\
   -e ONEUPTIME_URL=${host.toString()} \\
   -e HTTP_PROXY_URL=http://username:password@proxy.example.com:8080 \\
   -e HTTPS_PROXY_URL=http://username:password@proxy.example.com:8080 \\
   -e NO_PROXY=localhost,.internal.example.com \
-  -d oneuptime/probe:release
+  -d Encarta/probe:release
 `}
               />
             </div>

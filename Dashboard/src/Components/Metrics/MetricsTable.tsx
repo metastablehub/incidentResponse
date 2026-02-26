@@ -64,7 +64,7 @@ const MetricsTable: FunctionComponent<ComponentProps> = (
             const serviceIdString: string | undefined = serviceId?.toString();
 
             if (serviceIdString) {
-              metricAttributes["oneuptime.service.id"] = serviceIdString;
+              metricAttributes["Encarta.service.id"] = serviceIdString;
 
               const matchingService: Service | undefined = (
                 item.services || []
@@ -73,7 +73,7 @@ const MetricsTable: FunctionComponent<ComponentProps> = (
               });
 
               if (matchingService?.name) {
-                metricAttributes["oneuptime.service.name"] =
+                metricAttributes["Encarta.service.name"] =
                   matchingService.name;
               }
             }

@@ -74,7 +74,7 @@ const CustomSMTPTable: FunctionComponent = (): ReactElement => {
         cardProps={{
           title: "Custom SMTP Configs",
           description:
-            "If you need OneUptime to send emails through your SMTP Server, please enter the server details here.",
+            "If you need Encarta to send emails through your SMTP Server, please enter the server details here.",
         }}
         formSteps={[
           {
@@ -317,7 +317,7 @@ const CustomSMTPTable: FunctionComponent = (): ReactElement => {
             fieldType: FormFieldSchemaType.Text,
             required: true,
             description:
-              "This is the display name your team and customers see, when they receive emails from OneUptime.",
+              "This is the display name your team and customers see, when they receive emails from Encarta.",
             placeholder: "Company, Inc.",
             disableSpellCheck: true,
           },

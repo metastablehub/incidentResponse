@@ -16,7 +16,7 @@ Azure Account - You can create one by going to https://azure.com.
 1. Go to the [Azure Portal](https://portal.azure.com)
 2. Navigate to "App registrations" and click "New registration"
 3. Fill out the registration form:
-   - **Name:** oneuptime
+   - **Name:** Encarta
    - **Supported account types:** Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)
    - **Redirect URI:** Web - \`${window.location.origin}/api/microsoft-teams/auth\`
    - Please also add: \`${window.location.origin}/api/microsoft-teams/admin-consent/callback\`
@@ -60,7 +60,7 @@ Please note: Do not copy the secret ID, you need the secret VALUE which is typic
 
 1. In the Azure Portal, navigate to "Azure Bot" and click "Create"
 2. Fill out the bot creation form:
-   - **Bot handle:** oneuptime-bot
+   - **Bot handle:** Encarta-bot
    - **Subscription:** Your Azure subscription
    - **Resource group:** Create a new one or use an existing one
    - **Location:** Choose a location close to your users
@@ -80,7 +80,7 @@ Please note: Do not copy the secret ID, you need the secret VALUE which is typic
 3. Review the settings (enable for Teams, keep default messaging options unless you have specific needs)
 4. Click "Save" (and "Done"/"Publish" if prompted) to enable the Teams channel
 
-##### Step 7: Add these environment variables to your OneUptime server
+##### Step 7: Add these environment variables to your Encarta server
 
 If you are using Docker Compose then,
 
@@ -100,7 +100,7 @@ microsoftTeamsApp:
 \`\`\`
 
 
-Restart your OneUptime server after adding these environment variables so they take effect.
+Restart your Encarta server after adding these environment variables so they take effect.
 
 ##### Step 8: Upload Teams App Manifest
 
@@ -121,14 +121,14 @@ If you encounter issues:
 - Verify your environment variables are set correctly
 - Make sure the bot is added to the channels you want to post to
 
-We would like to improve this integration, so feedback is more than welcome. Please send us any at hello@oneuptime.com
+We would like to improve this integration, so feedback is more than welcome. Please send us any at hello@Encarta.com
 
     `;
 
     return (
       <Card
-        title={`Integrating Microsoft Teams with your OneUptime Project`}
-        description={`Microsoft Teams is not connected to OneUptime. Here are some of the steps you need to do to integrate Microsoft Teams with your OneUptime Project`}
+        title={`Integrating Microsoft Teams with your Encarta Project`}
+        description={`Microsoft Teams is not connected to Encarta. Here are some of the steps you need to do to integrate Microsoft Teams with your Encarta Project`}
       >
         <MarkdownViewer text={markdownText} />
       </Card>

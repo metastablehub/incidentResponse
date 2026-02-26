@@ -96,54 +96,6 @@ const DashboardNavbar: FunctionComponent<ComponentProps> = (
       iconColor: "cyan",
       category: "Essentials",
     },
-    // Observability
-    {
-      title: "Logs",
-      description: "Search and analyze logs.",
-      route: RouteUtil.populateRouteParams(RouteMap[PageMap.LOGS] as Route),
-      activeRoute: RouteMap[PageMap.LOGS],
-      icon: IconProp.Logs,
-      iconColor: "amber",
-      category: "Observability",
-    },
-    {
-      title: "Metrics",
-      description: "Monitor system metrics.",
-      route: RouteUtil.populateRouteParams(RouteMap[PageMap.METRICS] as Route),
-      activeRoute: RouteMap[PageMap.METRICS],
-      icon: IconProp.Heartbeat,
-      iconColor: "purple",
-      category: "Observability",
-    },
-    {
-      title: "Traces",
-      description: "Distributed tracing analysis.",
-      route: RouteUtil.populateRouteParams(RouteMap[PageMap.TRACES] as Route),
-      activeRoute: RouteMap[PageMap.TRACES],
-      icon: IconProp.Waterfall,
-      iconColor: "yellow",
-      category: "Observability",
-    },
-    {
-      title: "Exceptions",
-      description: "Catch and fix bugs early.",
-      route: RouteUtil.populateRouteParams(
-        RouteMap[PageMap.EXCEPTIONS] as Route,
-      ),
-      activeRoute: RouteMap[PageMap.EXCEPTIONS],
-      icon: IconProp.Bug,
-      iconColor: "orange",
-      category: "Observability",
-    },
-    {
-      title: "Services",
-      description: "Manage service dependencies.",
-      route: RouteUtil.populateRouteParams(RouteMap[PageMap.SERVICES] as Route),
-      activeRoute: RouteMap[PageMap.SERVICES],
-      icon: IconProp.SquareStack,
-      iconColor: "indigo",
-      category: "Observability",
-    },
     // Automation & Analytics
     {
       title: "Dashboards",
@@ -218,7 +170,7 @@ const DashboardNavbar: FunctionComponent<ComponentProps> = (
     description:
       "We embrace open-source! Please report any issue you find and make feature requests on GitHub.",
     link: URL.fromString(
-      "https://github.com/OneUptime/oneuptime/issues/new/choose",
+      "https://github.com/Encarta/Encarta/issues/new/choose",
     ),
   };
 

@@ -20,7 +20,7 @@ Please create a Slack App with the following manifest. You can do this by going 
 ${JSON.stringify(props.manifest, null, 2)}
 \`\`\`
 
-##### Step 2: Add these env variables to your OneUptime server
+##### Step 2: Add these env variables to your Encarta server
 
 If you are using Docker Compose then, 
 
@@ -40,19 +40,19 @@ slackApp:
   signingSecret:
 \`\`\`
 
-##### Step 3: Restart your OneUptime server
+##### Step 3: Restart your Encarta server
 
-You need to restart your OneUptime server to apply these changes. Once you have restarted the server, you should see the "Connect to Slack" button on this page. 
+You need to restart your Encarta server to apply these changes. Once you have restarted the server, you should see the "Connect to Slack" button on this page. 
 
-We would like to improve this integration, so feedback is more than welcome. Please send us any at hello@oneuptime.com
+We would like to improve this integration, so feedback is more than welcome. Please send us any at hello@Encarta.com
 
 
     `;
 
   return (
     <Card
-      title={`Integrating Slack with your OneUptime Project`}
-      description={`Slack is not connected to OneUptime. Here are some of the steps you need to do to integrate Slack with your OneUptime Project`}
+      title={`Integrating Slack with your Encarta Project`}
+      description={`Slack is not connected to Encarta. Here are some of the steps you need to do to integrate Slack with your Encarta Project`}
     >
       <MarkdownViewer text={markdwonText} />
     </Card>

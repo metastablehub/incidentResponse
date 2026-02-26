@@ -273,7 +273,7 @@ const DashboardProjectPicker: FunctionComponent<ComponentProps> = (
           initialValues={initialValues}
           name="Create New Project"
           title="Create New Project"
-          description="Please create a new OneUptime project to get started."
+          description="Please create a new Encarta project to get started."
           onClose={() => {
             setShowModal(false);
             props.onProjectModalClose();

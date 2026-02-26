@@ -13,7 +13,7 @@ const PageNotFound: FunctionComponent<
     <Page title={""} breadcrumbLinks={[]}>
       <NotFound
         homeRoute={new Route("/dashboard")}
-        supportEmail={new Email("support@oneuptime.com")}
+        supportEmail={new Email("support@Encarta.com")}
       />
     </Page>
   );

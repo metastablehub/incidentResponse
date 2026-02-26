@@ -20,7 +20,7 @@ import {
   CAPTCHA_ENABLED,
   CAPTCHA_SITE_KEY,
 } from "Common/UI/Config";
-import OneUptimeLogo from "Common/UI/Images/logos/OneUptimeSVG/3-transparent.svg";
+import OneUptimeLogo from "Common/UI/Images/logos/wheatlogo.png";
 import BaseAPI from "Common/UI/Utils/API/API";
 import UiAnalytics from "Common/UI/Utils/Analytics";
 import LocalStorage from "Common/UI/Utils/LocalStorage";
@@ -303,13 +303,13 @@ const RegisterPage: () => JSX.Element = () => {
         <img
           className="mx-auto h-10 w-auto sm:h-12"
           src={OneUptimeLogo}
-          alt="OneUptime"
+          alt="Encarta"
         />
         <h2 className="mt-4 sm:mt-6 text-center text-xl sm:text-2xl tracking-tight text-gray-900">
-          Create your OneUptime account
+          Create your Encarta account
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600 px-2 sm:px-0">
-          Join thousands of business that use OneUptime to help them stay online
+          Join thousands of business that use Encarta to help them stay online
           all the time.
         </p>
         <p className="mt-2 text-center text-sm text-gray-600">

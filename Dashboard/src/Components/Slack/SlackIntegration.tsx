@@ -346,7 +346,7 @@ const SlackIntegration: FunctionComponent<ComponentProps> = (
       setError(
         <div>
           Looks like the Slack App Client ID is not set in the environment
-          variables when you installed OneUptime. For more information, please
+          variables when you installed Encarta. For more information, please
           check this guide to set up Slack App properly:{" "}
           <Link
             to={new Route("/docs/self-hosted/slack-integration")}
@@ -377,8 +377,8 @@ const SlackIntegration: FunctionComponent<ComponentProps> = (
 
   // if user is not connected and the project is connected with slack.
   if (!isUserAccountConnected && isProjectAccountConnected) {
-    cardTitle = `You are disconnected from Slack (but OneUptime is already installed in ${slackTeamName} team)`;
-    cardDescription = `Connect your account with Slack to make the most out of OneUptime.`;
+    cardTitle = `You are disconnected from Slack (but Encarta is already installed in ${slackTeamName} team)`;
+    cardDescription = `Connect your account with Slack to make the most out of Encarta.`;
     cardButtons = [
       // connect with slack button.
       getConnectWithSlackButton(`Connect my account with Slack`),
@@ -399,7 +399,7 @@ const SlackIntegration: FunctionComponent<ComponentProps> = (
         icon: IconProp.Slack,
       },
       {
-        title: `Uninstall OneUptime from Slack`,
+        title: `Uninstall Encarta from Slack`,
         isLoading: isButtonLoading,
         buttonStyle: ButtonStyleType.DANGER,
         onClick: async () => {
@@ -436,7 +436,7 @@ const SlackIntegration: FunctionComponent<ComponentProps> = (
 
   if (!isProjectAccountConnected) {
     cardTitle = `Connect with Slack`;
-    cardDescription = `Connect your account with Slack to make the most out of OneUptime.`;
+    cardDescription = `Connect your account with Slack to make the most out of Encarta.`;
     cardButtons = [getConnectWithSlackButton(`Connect with Slack`)];
   }
 

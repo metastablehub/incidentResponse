@@ -252,7 +252,7 @@ const Push: () => JSX.Element = (): ReactElement => {
       {showRegisterDeviceModal ? (
         <BasicFormModal
           title="Register Device for Push Notifications"
-          description="This will register your current browser to receive push notifications from OneUptime. You'll be asked for permission to show notifications."
+          description="This will register your current browser to receive push notifications from Encarta. You'll be asked for permission to show notifications."
           isLoading={isLoading}
           submitButtonText="Register Device"
           onClose={() => {

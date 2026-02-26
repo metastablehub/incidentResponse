@@ -70,7 +70,7 @@ const AlertsSlackPage: FunctionComponent<
               text={`
 - 📌 **Pin emoji** (pushpin, round_pushpin) - React with a pin emoji to save the message as a **private note** (visible only to your team).
 
-When you react with a pin emoji, OneUptime will automatically save the message content as a private note to the alert linked to that channel and confirm with a reply in the thread.
+When you react with a pin emoji, Encarta will automatically save the message content as a private note to the alert linked to that channel and confirm with a reply in the thread.
               `}
             />
           </Card>
@@ -93,7 +93,7 @@ When you react with a pin emoji, OneUptime will automatically save the message c
               text={`
 - 📌 **Pin emoji** (pushpin, round_pushpin) - React with a pin emoji to save the message as a **private note** (visible only to your team).
 
-When you react with a pin emoji, OneUptime will automatically save the message content as a private note to the alert episode linked to that channel and confirm with a reply in the thread.
+When you react with a pin emoji, Encarta will automatically save the message content as a private note to the alert episode linked to that channel and confirm with a reply in the thread.
               `}
             />
           </Card>
