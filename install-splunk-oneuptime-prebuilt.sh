@@ -25,7 +25,15 @@ if [ -z "${GHCR_USERNAME:-}" ] || [ -z "${GHCR_TOKEN:-}" ]; then
   exit 1
 fi
 
-export SPLUNK_IMAGE_TAG="${SPLUNK_IMAGE_TAG:-latest}"
+if [ -z "${SPLUNK_IMAGE_TAG:-}" ]; then
+  echo "Set SPLUNK_IMAGE_TAG to a published GHCR tag (for example: encarta-ui-2026-02-28)."
+  exit 1
+fi
+
+if [ "$SPLUNK_IMAGE_TAG" = "latest" ]; then
+  echo "SPLUNK_IMAGE_TAG=latest is not allowed for production installs. Use a pinned tag."
+  exit 1
+fi
 
 echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USERNAME" --password-stdin
 docker compose --env-file config.env -f docker-compose.splunk-prod.yml pull

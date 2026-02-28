@@ -7,7 +7,6 @@ import Express, {
 import logger from "Common/Server/Utils/Logger";
 import App from "Common/Server/Utils/StartServer";
 import "ejs";
-import ObjectID from "Common/Types/ObjectID";
 import { handleRSS } from "./src/Server/API/RSS";
 import {
   getStatusPageData,
@@ -52,7 +51,7 @@ const init: PromiseVoidFunction = async (): Promise<void> => {
           description:
             "Status Page lets you see real-time information about the status of our services.",
           faviconUrl:
-            "/status-page/wheatlogo.png,
+            "/status-page/wheatlogo.png",
         };
       },
     });

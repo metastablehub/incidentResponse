@@ -1,7 +1,6 @@
 import PageMap from "../../Utils/PageMap";
 import RouteMap, { RouteUtil } from "../../Utils/RouteMap";
 import Route from "Common/Types/API/Route";
-import URL from "Common/Types/API/URL";
 import IconProp from "Common/Types/Icon/IconProp";
 import NavBar, {
   NavItem,
@@ -164,22 +163,11 @@ const DashboardNavbar: FunctionComponent<ComponentProps> = (
     activeRoute: RouteMap[PageMap.USER_SETTINGS],
   };
 
-  // Define the more menu footer
-  const moreMenuFooter: any = {
-    title: "Report a bug or request a feature.",
-    description:
-      "We embrace open-source! Please report any issue you find and make feature requests on GitHub.",
-    link: URL.fromString(
-      "https://github.com/Encarta/Encarta/issues/new/choose",
-    ),
-  };
-
   return (
     <NavBar
       items={navItems}
       rightElement={rightElement}
       moreMenuItems={moreMenuItems}
-      moreMenuFooter={moreMenuFooter}
     />
   );
 };

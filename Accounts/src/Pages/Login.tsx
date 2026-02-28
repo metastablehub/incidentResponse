@@ -22,7 +22,6 @@ import {
   CAPTCHA_SITE_KEY,
 } from "Common/UI/Config";
 import OneUptimeLogo from "Common/UI/Images/logos/wheatlogo.png";
-import EditionLabel from "Common/UI/Components/EditionLabel/EditionLabel";
 import UiAnalytics from "Common/UI/Utils/Analytics";
 import LoginUtil from "Common/UI/Utils/Login";
 import UserTotpAuth from "Common/Models/DatabaseModels/UserTotpAuth";
@@ -281,9 +280,6 @@ const LoginPage: () => JSX.Element = () => {
           src={OneUptimeLogo}
           alt="Encarta"
         />
-        <div className="mt-4 flex justify-center">
-          <EditionLabel />
-        </div>
         {!showTwoFactorAuth && (
           <>
             <h2 className="mt-4 sm:mt-6 text-center text-xl sm:text-2xl tracking-tight text-gray-900">
