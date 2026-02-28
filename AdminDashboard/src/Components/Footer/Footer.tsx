@@ -68,7 +68,7 @@ const DashboardFooter: () => JSX.Element = () => {
     <>
       <Footer
         className="bg-white px-8"
-        copyright="HackerBay, Inc."
+        copyright="Encarta.ai"
         links={[
           {
             title: "Help and Support",

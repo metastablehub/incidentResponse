@@ -9,7 +9,6 @@ import API from "Common/Utils/API";
 import Footer from "Common/UI/Components/Footer/Footer";
 import Icon from "Common/UI/Components/Icon/Icon";
 import ConfirmModal from "Common/UI/Components/Modal/ConfirmModal";
-import EditionLabel from "Common/UI/Components/EditionLabel/EditionLabel";
 import { HOST, HTTP_PROTOCOL } from "Common/UI/Config";
 import React from "react";
 
@@ -71,11 +70,8 @@ const DashboardFooter: () => JSX.Element = () => {
     <>
       <Footer
         className="bg-gray-50/50 border-t border-gray-100 px-8"
-        copyright="HackerBay, Inc."
+        copyright="Encarta.ai"
         links={[
-          {
-            content: <EditionLabel />,
-          },
           {
             title: (
               <span className="inline-flex items-center gap-1.5 text-gray-400 hover:text-gray-500">

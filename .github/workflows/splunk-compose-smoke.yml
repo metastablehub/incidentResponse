@@ -1,0 +1,47 @@
+name: Splunk Compose Smoke Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "docker-compose.splunk-prod.yml"
+      - "install-splunk-oneuptime-prebuilt.sh"
+      - "publish-splunk-ghcr.sh"
+      - "config.example.env"
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SERVER_API_REFERENCE_HOSTNAME: placeholder
+      API_REFERENCE_PORT: "80"
+      SPLUNK_IMAGE_TAG: encarta-ui-2026-02-28
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare config
+        run: cp config.example.env config.env
+
+      - name: Start stack
+        run: docker compose --env-file config.env -f docker-compose.splunk-prod.yml up -d
+
+      - name: Wait for ingress 200 on port 80
+        run: |
+          for i in $(seq 1 40); do
+            code="$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:80 || true)"
+            if [ "$code" = "200" ]; then
+              echo "Ingress is healthy with HTTP 200"
+              exit 0
+            fi
+            sleep 5
+          done
+          docker compose --env-file config.env -f docker-compose.splunk-prod.yml ps
+          docker compose --env-file config.env -f docker-compose.splunk-prod.yml logs --tail=120 ingress
+          exit 1
+
+      - name: Stop stack
+        if: always()
+        run: docker compose --env-file config.env -f docker-compose.splunk-prod.yml down -v
