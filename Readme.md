@@ -1,3 +1,97 @@
+v2 Install:
+1. Create a Linux VM (Ubuntu 22.04/24.04 recommended) with at least:
+- `4 vCPU`, `16 GB RAM`, `80+ GB disk`
+- Public IP
+- Firewall open on `80` and `443`
+
+2. SSH into the VM and install Docker + Compose plugin:
+```bash
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin git
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+3. Clone your repo:
+```bash
+git clone <your-repo-url> /opt/incidentResponse
+cd /opt/incidentResponse
+```
+
+4. Create config file:
+```bash
+cp config.example.env config.env
+```
+
+5. Edit `config.env`:
+```bash
+nano config.env
+```
+Set at minimum:
+- `HOST=<your_vm_public_ip_or_domain>`
+- `ONEUPTIME_HTTP_PORT=80`
+- `PROVISION_SSL=false` (or `true` if domain DNS is ready for Let's Encrypt)
+- All secrets (`ONEUPTIME_SECRET`, `DATABASE_PASSWORD`, etc.) to strong random values
+- `SPLUNK_IMAGE_TAG=encarta-ui-2026-02-28`  ← important (pinned tag)
+
+6. Export GHCR credentials:
+```bash
+export GHCR_USERNAME=metastablehub
+export GHCR_TOKEN=<your_ghcr_pat_with_read:packages>
+```
+
+7. Pull and run prebuilt images:
+```bash
+chmod +x install-splunk-oneuptime-prebuilt.sh
+./install-splunk-oneuptime-prebuilt.sh
+```
+
+8. Verify containers are up:
+```bash
+docker compose --env-file config.env -f docker-compose.splunk-prod.yml ps
+```
+
+9. Verify HTTP response:
+```bash
+curl -I http://127.0.0.1:80
+curl -I http://<your_vm_public_ip>:80
+```
+You should see `HTTP/1.1 200 OK`.
+
+10. Open in browser:
+- `http://<your_vm_public_ip>`  
+- If using DNS: `http://<your_domain>` (or `https://` if SSL enabled)
+
+If you want, I can also give you a hardened production checklist (TLS, backups, monitoring, auto-restart policy, and upgrade procedure).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # IncidentResponse Custom OneUptime Deployment Guide
 
 This repository contains a customized OneUptime build for `metastablehub/incidentResponse` with branding changes and a reduced product surface.
