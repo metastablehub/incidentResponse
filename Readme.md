@@ -76,6 +76,26 @@ git pull
 
 Use this when deploying to a different VM and you want to pull hardened images from GHCR instead of building.
 
+### 0. Pre-requisites
+Docker, Docker compose, Git, vim
+RAM: 16 GB
+ROM: 140GB
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+```bash
+sudo apt update && sudo apt install git -y
+```
+
+```bash
+sudo apt update
+sudo apt install vim -y
+```
+
+
 ### 1. Clone repository
 
 ```bash
